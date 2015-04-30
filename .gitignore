@@ -1,0 +1,14 @@
+.DS_Store
+
+# vim
+vim/backup/*
+vim/bundle/*
+vim/swap/*
+vim/undo/*
+vim/hateblo.vim
+
+# zprezto
+zprezto/*
+
+# misc
+*.pyc
