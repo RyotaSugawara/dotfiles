@@ -1,6 +1,6 @@
 " Personal Settings
 
-cnoremap <C-t> <C-u>tabnew<CR>
+nnoremap <C-t> :<C-u>tabnew<CR>
 nnoremap <C-h> :<C-u>tabprevious<CR>
 nnoremap <C-l> :<C-u>tabnext<CR>
 
