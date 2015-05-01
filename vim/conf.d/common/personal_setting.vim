@@ -30,10 +30,8 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " restore scroll position
 "------------------------------------
 if has("autocmd")
-	autocmd BufReadPost *
-				\if line("'\"") > 0 && line("'\"") <= line("$") |
-				\	exe "normal! g'\"" |
-				\endif
+	autocmd BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+				\	exe "normal! g'\"" | endif
 endif
 "------------------------------------
 
