@@ -1,0 +1,228 @@
+let s:script_dir = expand('<sfile>:p:h')
+let s:dotfiles_dir = $HOME."/dotfiles"
+let s:vim_dir = s:dotfiles_dir."/vim"
+
+set nocompatible
+set clipboard+=unnamed
+let mapleader=','
+nnoremap <space>v :<C-u>edit $HOME/dotfiles/vim/vimrc<CR>
+nnoremap <space>s :<C-u>source $HOME/.vimrc<CR>
+" Character encoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+" Automatic end-of-file format detection
+set fileformats=unix,mac,dos
+
+let $CELLER_DIR="/usr/local/Cellar"
+" let $PYTHON_DLL=$CELLER_DIR."/python/2.7.9/Frameworks/Python.framework/Versions/Current/lib/libpython2.7.dylib"
+
+""""""""
+" TEXT "
+""""""""
+"{{{
+set autoindent
+set smartindent
+set tabstop=4
+" set expandtab
+" set nosmarttab
+" set softtabstop=2
+set shiftwidth=4
+" set shiftround
+
+set infercase
+set formatoptions+=n
+set wrapmargin=0
+set virtualedit=block
+set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«,nbsp:%
+set nolist
+set ambiwidth=double
+
+set textwidth=0
+if v:version >= 703
+	set colorcolumn=120
+endif
+set foldmethod=marker
+"}}}
+
+
+""""""""
+" Undo "
+" Swap "
+""""""""
+"" path
+let g:local_backup_dir=s:vim_dir.'/backup'
+let g:local_swap_dir=s:vim_dir.'/swap'
+let g:local_undo_dir=s:vim_dir.'/undo'
+
+if !filewritable(g:local_backup_dir)
+	call mkdir(g:local_backup_dir)
+endif
+if !filewritable(g:local_swap_dir)
+	call mkdir(g:local_swap_dir)
+endif
+if !filewritable(g:local_undo_dir)
+	call mkdir(g:local_undo_dir)
+endif
+let &directory=g:local_swap_dir
+let &backupdir=g:local_backup_dir
+
+set backup
+set writebackup
+
+if has('persistent_undo')
+	let &undodir=g:local_undo_dir
+	set undofile
+endif
+
+""""""""
+"  UI  "
+""""""""
+"{{{
+set ruler
+augroup cch
+	autocmd!
+	autocmd WinLeave * set nocursorline
+	autocmd WinEnter,BufRead * set cursorline
+augroup END
+highlight clear CursorLine
+highlight CursorLine ctermbg=black
+
+set showcmd
+set number
+set nolazyredraw
+set wildmenu
+set wildmode=list:longest,full
+set cmdheight=1
+set whichwrap=b,s,h,l,<,>,[,]
+set backspace=indent,eol,start
+set shortmess=filtoOA
+set report=0
+set nostartofline
+set showmatch
+set matchtime=3
+set laststatus=2
+set scrolloff=5
+set visualbell t_vb=
+set nrformats-=octal,hex,alpha
+if has("mouse")
+	set mouse=a
+endif
+
+augroup Redraw
+	autocmd!
+	autocmd FocusGained * redraw!
+augroup END
+"}}}
+
+""""""""""
+" Window 
+""""""""""
+set splitbelow
+set splitright
+
+""""""""""""
+" HighLight
+""""""""""""
+colorscheme hybrid
+syntax on
+
+function! WhiteSpaceEOL()
+	highlight WhiteSpaceEOL ctermbg=red guibg=red
+endfunction
+function! ZenkakuSpace()
+	highlight ZenkakuSpace ctermbg=green guibg=green
+endfunction
+
+if has('syntax')
+	augroup WhiteSpaceEOL
+		autocmd!
+		autocmd ColorScheme       * call WhiteSpaceEOL()
+		autocmd VimEnter,WinEnter * match WhiteSpaceEOL /\s\+$/
+	augroup END
+	call WhiteSpaceEOL()
+	augroup ZenkakuSpace
+		autocmd!
+		autocmd ColorScheme       * call ZenkakuSpace()
+		autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+	augroup END
+	call ZenkakuSpace()
+endif
+
+""""""""""
+" Search
+""""""""""
+"{{{
+set history=100
+set ignorecase
+set smartcase
+set wrapscan
+set incsearch
+set hlsearch
+nmap <ESC><ESC> :<C-u>nohlsearch<CR><ESC>
+augroup Search
+	autocmd!
+	autocmd QuickFixCmdPost *grep cwindow
+augroup END
+"}}}
+
+" FileTypeConfig
+augroup FileTypeDetect "{{{
+	autocmd!
+	autocmd BufRead,BufNewFile *.java                   setfiletype java
+	autocmd BufRead,BufNewFile Capfile,Gemfile,Rakefile setfiletype ruby
+	autocmd BufRead,BufNewFile *.gyp,*.js               setfiletype javascript
+	autocmd BufRead,BufNewFile *.json                   setfiletype json
+	autocmd BufRead,BufNewFile *.{md,mdwn,mkd,mkdn,mark*,txt,text} setfiletype markdown
+	autocmd BufRead,BufNewFile *.PL,*.psgi,*.t          setfiletype perl
+	autocmd BufRead,BufNewFile .tmux.conf,tmux.conf     setfiletype tmux
+	autocmd BufRead,BufNewFile *.jade                   setfiletype jade
+	autocmd BufRead,BufNewFile *.less                   setfiletype less
+	autocmd BufRead,BufNewFile *.coffee                 setfiletype coffee
+	autocmd BufRead,BufNewFile *.hatena                 setfiletype markdown
+	autocmd BufRead,BufNewFile *.pp                     setfiletype puppet
+	autocmd BufRead,BufNewFile *.scss                   setfiletype scss
+	autocmd BufRead,BufNewFile *.styl,*.stylus          setfiletype stylus
+	autocmd BufRead,BufNewFile *.py                     setfiletype python
+	autocmd BufRead,BufNewFile *.html                   setfiletype html
+	autocmd BufRead,BufNewFile *.go                     setfiletype go
+	autocmd BufRead,BufNewFile *.tex                    setfiletype tex
+	autocmd BufWinEnter,BufNewFile *_spec.rb            setfiletype ruby.rspec
+augroup END
+"}}}
+
+
+"---------------------------
+" Neobundle Settings
+"---------------------------
+"{{{
+filetype off
+
+"""""" NeoBundle {{{
+if !1 | finish | endif
+if has('vim_starting')
+	set nocompatible
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" manage neobundle by neobundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" loading bundle_list.vim
+source $HOME/.vim/bundle_list.vim
+
+call neobundle#end()
+"}}}
+
+filetype plugin indent on
+
+" uninstallede plungins checker
+NeoBundleCheck
+"}}}
+
+set runtimepath+=$HOME/dotfiles/vim/
+runtime! conf.d/common/*.vim
+runtime! conf.d/filetypes/*.vim
+runtime! conf.d/plugins/*.vim

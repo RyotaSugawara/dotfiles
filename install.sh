@@ -8,8 +8,7 @@ echo 'symbolic linking...'
 
 echo 'symbolic linking...(zsh)'
 # zsh
-# ln -s "${BASEDIR}/zprezto" ${HOME}/.zprezto
-# ln -s ${ZSH_FILES}/rumcoms/zshrc ${HOME}/.zshrc
+ln -s ${ZSH_FILES}/rumcoms/zshrc ${HOME}/.zshrc
 
 echo 'symbolic linking...(vim)'
 # vim
