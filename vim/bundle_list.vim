@@ -41,9 +41,15 @@ NeoBundle 'gregsexton/gitv', {
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 " Comment out on/off with Shift+V -> Ctrl+-
 NeoBundle 'tomtom/tcomment_vim'
+
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+" VimFiler
+NeoBundle 'Shougo/vimfiler.vim'
+" vimshell
+NeoBundle 'Shougo/vimshell.vim'
+
 " light line
 NeoBundle 'cocopon/lightline-hybrid.vim'
 NeoBundle 'itchyny/lightline.vim'

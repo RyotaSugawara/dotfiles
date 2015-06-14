@@ -23,7 +23,7 @@ hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=237
 au FileType coffee,ruby,javascript,python IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 "------------------------------------
