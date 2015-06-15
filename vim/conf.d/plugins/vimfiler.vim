@@ -2,7 +2,7 @@
 
 let file_name = expand("%")
 if has('vim_starting') && file_name == ""
-  autocmd VimEnter * VimFiler -buffer-name=explorer -simple -split -winwidth=30 -no-quit
+  autocmd VimEnter * VimFiler -buffer-name=explorer -simple -split -winwidth=31 -no-quit
 endif
 
 " KeyMap

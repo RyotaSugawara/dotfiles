@@ -86,6 +86,11 @@ NeoBundle 'briancollins/vim-jst', {
 			\		'filetypes': ['jst', 'ejs']
 			\	}
 			\}
+NeoBundle 'heavenshell/vim-jsdoc', {
+			\	'autoload': {
+			\		'filetypes': ['javascript']
+			\	}
+			\}
 NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " HTML / CSS
