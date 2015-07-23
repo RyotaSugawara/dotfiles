@@ -14,5 +14,5 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 hi SyntasticErrorSign ctermfg=160
 hi SyntasticWarningSign ctermfg=220
-"let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_javascript_checkers = ['eslint']
