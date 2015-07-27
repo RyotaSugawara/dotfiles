@@ -16,3 +16,5 @@ hi SyntasticErrorSign ctermfg=160
 hi SyntasticWarningSign ctermfg=220
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers = ['']
+let g:syntastic_typescript_checkers = ['']

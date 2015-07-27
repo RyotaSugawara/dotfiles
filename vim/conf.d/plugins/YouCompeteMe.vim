@@ -5,5 +5,6 @@ let g:ycm_filetype_whitelist = {
       \ 'html': 1,
       \ 'jade': 1,
       \ 'coffee': 2,
+      \ 'typescript': 1,
 			\	'go': 1
 			\}

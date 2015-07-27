@@ -80,6 +80,11 @@ NeoBundle 'kchmck/vim-coffee-script', {
 			\		'filetypes': ['coffee']
 			\	}
 			\}
+NeoBundle 'leafgarland/typescript-vim', {
+      \ 'autoload': {
+      \   'filetypes': ['ts']
+      \ }
+      \}
 NeoBundle 'briancollins/vim-jst', {
 			\	'autoload': {
 			\		'filetypes': ['jst', 'ejs']
