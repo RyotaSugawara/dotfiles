@@ -1,6 +1,8 @@
-
 " startify
 NeoBundle 'mhinz/vim-startify'
+" unite.vim
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 
 " vimproc
 NeoBundle 'Shougo/vimproc.vim', {
@@ -42,9 +44,6 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 " Comment out on/off with Shift+V -> Ctrl+-
 NeoBundle 'tomtom/tcomment_vim'
 
-" unite.vim
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
 " VimFiler
 NeoBundle 'Shougo/vimfiler.vim'
 " vimshell
@@ -130,6 +129,12 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'glidenote/memolist.vim', {
 			\	'autoload': {
 			\		'filetypes': ['markdown']
+			\	}
+			\}
+" golang
+NeoBundle 'fatih/vim-go', {
+			\	'autoload': {
+			\		'filetypes': ['go']
 			\	}
 			\}
 

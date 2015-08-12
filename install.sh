@@ -2,7 +2,7 @@
 
 BASEDIR="$HOME/dotfiles"
 ZSH_FILES="${BASEDIR}/zsh"
-VIM_FILES="${BASEDIR}/zsh"
+VIM_FILES="${BASEDIR}/vim"
 
 echo 'symbolic linking...'
 

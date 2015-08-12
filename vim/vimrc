@@ -211,7 +211,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " loading bundle_list.vim
-source $HOME/.vim/bundle_list.vim
+source $HOME/dotfiles/vim/bundle_list.vim
 
 call neobundle#end()
 "}}}
