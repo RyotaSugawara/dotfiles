@@ -103,6 +103,11 @@ NeoBundle 'mattn/emmet-vim', {
 			\		'filetypes': ['html', 'erb', 'ejs']
 			\	}
 			\}
+NeoBundle 'chaquotay/ftl-vim-syntax', {
+      \ 'autoload': {
+      \   'filetypes': ['ftl']
+      \ }
+      \}
 NeoBundle 'cakebaker/scss-syntax.vim', {
 			\	'autoload': {
 			\		'filetypes': ['scss']
