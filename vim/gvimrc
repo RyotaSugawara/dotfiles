@@ -1,0 +1,19 @@
+set background=dark
+syntax on
+"""""""""""""""""""
+" gui options
+"""""""""""""""""""
+" transparent 20%
+set transparency=20
+" no scrollbars
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+set guioptions-=
+set guioptions-=b
+" no menu bars
+set guioptions-=T
+set guioptions-=m
+" from shimada
+set cmdheight=1
