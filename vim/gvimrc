@@ -4,7 +4,7 @@ syntax on
 " gui options
 """""""""""""""""""
 " transparent 20%
-set transparency=20
+set transparency=10
 " no scrollbars
 set guioptions-=r
 set guioptions-=R

@@ -170,7 +170,7 @@ augroup END
 " FileTypeConfig
 augroup FileTypeDetect "{{{
   autocmd!
-  autocmd BufRead,BufNewFile *.ftl                    setfiletype ftl
+  autocmd BufRead,BufNewFile *.ftl                    setfiletype html
   autocmd BufRead,BufNewFile *.java                   setfiletype java
   autocmd BufRead,BufNewFile Capfile,Gemfile,Rakefile setfiletype ruby
   autocmd BufRead,BufNewFile *.gyp,*.js               setfiletype javascript

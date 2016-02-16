@@ -136,11 +136,7 @@ NeoBundleLazy 'kannokanno/previm', {
 			\	}
 			\}
 NeoBundle 'thinca/vim-localrc'
-NeoBundle 'glidenote/memolist.vim', {
-			\	'autoload': {
-			\		'filetypes': ['markdown']
-			\	}
-			\}
+NeoBundle 'glidenote/memolist.vim'
 " golang
 NeoBundle 'fatih/vim-go', {
 			\	'autoload': {
