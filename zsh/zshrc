@@ -95,3 +95,7 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# aeromock
+AEROMOCK_HOME=$HOME/.aeromock/applications/current
+export PATH=$PATH:$AEROMOCK_HOME
