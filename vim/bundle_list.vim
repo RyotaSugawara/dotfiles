@@ -80,11 +80,17 @@ NeoBundle 'kchmck/vim-coffee-script', {
 			\		'filetypes': ['coffee']
 			\	}
 			\}
-NeoBundle 'leafgarland/typescript-vim', {
-      \ 'autoload': {
-      \   'filetypes': ['typescript']
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'linux' : 'make',
+      \     'unix' : 'gmake',
+      \    },
       \ }
-      \}
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'briancollins/vim-jst', {
 			\	'autoload': {
 			\		'filetypes': ['jst', 'ejs']

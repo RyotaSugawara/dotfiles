@@ -171,10 +171,10 @@ augroup END
 augroup FileTypeDetect "{{{
   autocmd!
   autocmd BufRead,BufNewFile *.ftl                    setfiletype html
+  autocmd BufRead,BufNewFile *.ts                     setfiletype typescript
   autocmd BufRead,BufNewFile *.java                   setfiletype java
   autocmd BufRead,BufNewFile Capfile,Gemfile,Rakefile setfiletype ruby
   autocmd BufRead,BufNewFile *.gyp,*.js               setfiletype javascript
-  autocmd BufRead,BufNewFile *.ts                     setfiletype typescript
   autocmd BufRead,BufNewFile *.json                   setfiletype json
   autocmd BufRead,BufNewFile *.{md,mdwn,mkd,mkdn,mark*,txt,text} setfiletype markdown
   autocmd BufRead,BufNewFile *.PL,*.psgi,*.t          setfiletype perl
