@@ -82,7 +82,7 @@ NeoBundle 'kchmck/vim-coffee-script', {
 			\}
 NeoBundle 'leafgarland/typescript-vim', {
       \ 'autoload': {
-      \   'filetypes': ['ts']
+      \   'filetypes': ['typescript']
       \ }
       \}
 NeoBundle 'briancollins/vim-jst', {
