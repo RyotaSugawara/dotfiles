@@ -106,9 +106,14 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " HTML / CSS
 NeoBundle 'mattn/emmet-vim', {
 			\	'autoload': {
-			\		'filetypes': ['html', 'erb', 'ejs']
+			\		'filetypes': ['html', 'erb', 'ejs', 'css']
 			\	}
 			\}
+NeoBundle 'lepture/vim-velocity', {
+      \ 'autoload': {
+      \   'filetypes': ['velocity']
+      \ }
+      \}
 NeoBundle 'chaquotay/ftl-vim-syntax', {
       \ 'autoload': {
       \   'filetypes': ['ftl']
