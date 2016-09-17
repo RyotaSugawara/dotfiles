@@ -94,7 +94,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
 # aeromock
 AEROMOCK_HOME=$HOME/.aeromock/applications/current
