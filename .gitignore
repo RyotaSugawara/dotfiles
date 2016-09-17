@@ -5,7 +5,9 @@ vim/backup/*
 vim/bundle/*
 vim/swap/*
 vim/undo/*
-vim/hateblo.vim
+vim/plugged/
+vim/autoload/plug.vim
+vim/.netrwhist
 
 # zprezto
 zprezto/*
