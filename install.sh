@@ -13,7 +13,7 @@ ln -sf ${ZSH_FILES}/zshrc ${HOME}/.zshrc
 echo 'symbolic linking...(vim)'
 # vim
 ln -sf "${BASEDIR}/vim/" ${HOME}/.vim
-ln -sf ${VIM_FILES}/.vimrc ${HOME}/.vimrc
+ln -sf ${VIM_FILES}/vimrc ${HOME}/.vimrc
 ln -sf ${VIM_FILES}/gvimrc ${HOME}/.gvimrc
 ln -sf ${BASEDIR}/tern-config ${HOME}/.tern-config
 
