@@ -58,6 +58,7 @@ Plug 'moll/vim-node', { 'for': ['javascript'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
 Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript'] }
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript'] }
 
 " typescript
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
