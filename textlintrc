@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    "jser-markdown"
+  ],
+  "filters": {
+    "node-types": {
+      "nodeTypes": ["Link"]
+    }
+  },
+  "rules": {
+    "common-misspellings": true,
+    "max-ten": {
+      "max": 3
+    },
+    "no-doubled-joshi": {
+      "min_interval": 1
+    },
+    "sentence-length": {
+      "max": 300
+    },
+    "no-start-duplicated-conjunction": {
+      "interval": 2
+    },
+    "spellcheck-tech-word": true,
+    "no-mix-dearu-desumasu": true,
+    "no-dropping-the-ra": true
+  }
+}
