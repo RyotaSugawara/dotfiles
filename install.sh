@@ -16,6 +16,7 @@ ln -sf "${BASEDIR}/vim/" ${HOME}/.vim
 ln -sf ${VIM_FILES}/vimrc ${HOME}/.vimrc
 ln -sf ${VIM_FILES}/gvimrc ${HOME}/.gvimrc
 ln -sf ${BASEDIR}/tern-config ${HOME}/.tern-config
+ln -sf ${BASEDIR}/textlintrc ${HOME}/.textlintrc
 
 if [ ! -e "${VIM_FILES}/autoload/plug.vim" ]; then
 	echo "install plug.vim start"
@@ -25,24 +26,4 @@ if [ ! -e "${VIM_FILES}/autoload/plug.vim" ]; then
 fi
 
 echo 'symbolic linking...Done!'
-
-
-echo 'install npm modules...'
-npm install \
-  eslint \
-  eslint-plugin-react \
-  textlint \
-  textlint-filter-rule-node-types \
-  textlint-plugin-jser-markdown \
-  textlint-rule-common-misspellings \
-  textlint-rule-max-ten \
-  textlint-rule-no-doubled-joshi \
-  textlint-rule-no-dropping-the-ra \
-  textlint-rule-no-mix-dearu-desumasu \
-  textlint-rule-no-start-duplicated-conjunction \
-  textlint-rule-sentence-length \
-  textlint-rule-spellcheck-tech-word \
-  typescript \
-  -g
-echo 'install npm modules...Done!'
 
