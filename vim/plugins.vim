@@ -53,13 +53,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Editor config
 Plug 'editorconfig/editorconfig-vim'
 
-" javascript
-Plug 'moll/vim-node', { 'for': ['javascript'] }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
-Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript'] }
-Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript'] }
-
 " typescript
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
@@ -85,5 +78,13 @@ Plug 'kannokanno/previm', { 'for': ['markdown'] }
 Plug 'thinca/vim-localrc'
 Plug 'glidenote/memolist.vim'
 Plug 'vim-scripts/diffchar.vim'
+
+" javascript
+" Plug 'othree/yajs.vim', { 'for': ['javascript'] }
+" Plug 'isRuslan/vim-es6', { 'for': ['javascript'] }
+Plug 'pangloss/vim-javascript'
+Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript'] }
+
 
 call plug#end()
