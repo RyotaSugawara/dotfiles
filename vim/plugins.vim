@@ -80,11 +80,9 @@ Plug 'glidenote/memolist.vim'
 Plug 'vim-scripts/diffchar.vim'
 
 " javascript
-" Plug 'othree/yajs.vim', { 'for': ['javascript'] }
-" Plug 'isRuslan/vim-es6', { 'for': ['javascript'] }
 Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript'] }
+Plug 'maxmellon/vim-jsx-pretty'
 
 
 call plug#end()
