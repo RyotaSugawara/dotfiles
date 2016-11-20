@@ -190,6 +190,7 @@ augroup FileTypeDetect "{{{
   autocmd BufRead,BufNewFile *.styl,*.stylus          setfiletype stylus
   autocmd BufRead,BufNewFile *.py                     setfiletype python
   autocmd BufRead,BufNewFile *.html                   setfiletype html
+  autocmd BufRead,BufNewFile *.ejs                    setfiletype ejs
   autocmd BufRead,BufNewFile *.go                     setfiletype go
   autocmd BufRead,BufNewFile *.tex                    setfiletype tex
   autocmd BufRead,BufNewFile *.vm                     setfiletype velocity
