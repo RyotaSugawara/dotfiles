@@ -62,7 +62,6 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'erb', 'ejs', 'css'] }
 Plug 'lepture/vim-velocity', { 'for': ['velocity'] }
 Plug 'chaquotay/ftl-vim-syntax', { 'for': ['ftl'] }
 Plug 'digitaltoad/vim-jade', { 'for': ['jade'] }
-Plug 'nikvdp/ejs-syntax', { 'for': ['ejs'] }
 
 " CSS
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss'] }
