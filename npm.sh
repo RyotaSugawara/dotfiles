@@ -17,6 +17,7 @@ npm install \
   textlint-rule-sentence-length \
   textlint-rule-spellcheck-tech-word \
   typescript \
+  typings \
   -g
 echo 'install npm modules...Done!'
 

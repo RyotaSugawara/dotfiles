@@ -56,6 +56,7 @@ Plug 'editorconfig/editorconfig-vim'
 " typescript
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+Plug 'mhartington/vim-typings', { 'for': ['typescript'] }
 
 " HTML
 Plug 'mattn/emmet-vim', { 'for': ['html', 'erb', 'ejs', 'css'] }
