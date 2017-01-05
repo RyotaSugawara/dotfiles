@@ -84,6 +84,9 @@ Plug 'vim-scripts/diffchar.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript'] }
 Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'flowtype/vim-flow', {
+      \   'for': ['javascript'],
+      \   'do': 'npm install -g flow-bin'
+      \ }
 
 call plug#end()
