@@ -185,8 +185,8 @@ augroup FileTypeDetect "{{{
   autocmd BufRead,BufNewFile *.coffee                 setfiletype coffee
   autocmd BufRead,BufNewFile *.hatena                 setfiletype markdown
   autocmd BufRead,BufNewFile *.pp                     setfiletype puppet
-  autocmd BufRead,BufNewFile *.css                    setfiletype css
-  autocmd BufRead,BufNewFile *.scss                   setfiletype scss
+  " autocmd BufRead,BufNewFile *.css                    setfiletype css
+  autocmd BufRead,BufNewFile *.css, *.scss            setfiletype scss
   autocmd BufRead,BufNewFile *.styl,*.stylus          setfiletype stylus
   autocmd BufRead,BufNewFile *.py                     setfiletype python
   autocmd BufRead,BufNewFile *.html                   setfiletype html
