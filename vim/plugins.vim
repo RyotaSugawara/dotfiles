@@ -65,8 +65,9 @@ Plug 'chaquotay/ftl-vim-syntax', { 'for': ['ftl'] }
 Plug 'digitaltoad/vim-jade', { 'for': ['jade'] }
 
 " CSS
+" Plug 'stephenway/postcss.vim', { 'for': [ 'css' ] }
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss'] }
-Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
+" Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css'] }
 
 " Go
