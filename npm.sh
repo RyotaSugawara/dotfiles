@@ -1,10 +1,18 @@
 #!/bin/sh
 
 echo 'install npm modules...'
-npm install \
-  eslint \
+npm install -g \
   babel-eslint \
+  bower \
+  eslint \
+  eslint-plugin-flowtype \
+  eslint-plugin-promise \
   eslint-plugin-react \
+  flow-bin \
+  gulp \
+  http-server \
+  license-checker \
+  supervisor \
   textlint \
   textlint-filter-rule-node-types \
   textlint-plugin-jser-markdown \
@@ -16,8 +24,8 @@ npm install \
   textlint-rule-no-start-duplicated-conjunction \
   textlint-rule-sentence-length \
   textlint-rule-spellcheck-tech-word \
-  typescript \
+  ts-node \
   typings \
-  -g
+  yarn
 echo 'install npm modules...Done!'
 
