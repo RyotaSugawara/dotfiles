@@ -27,6 +27,8 @@ npm install -g \
   ts-node \
   typings \
   stylelint \
+  stylelint-config-css-modules \
+  stylelint-config-standard \
   yarn
 echo 'install npm modules...Done!'
 
