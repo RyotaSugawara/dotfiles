@@ -26,6 +26,7 @@ npm install -g \
   textlint-rule-spellcheck-tech-word \
   ts-node \
   typings \
+  stylelint \
   yarn
 echo 'install npm modules...Done!'
 
