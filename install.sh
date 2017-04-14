@@ -18,6 +18,7 @@ ln -sf ${VIM_FILES}/gvimrc ${HOME}/.gvimrc
 ln -sf ${BASEDIR}/tern-config ${HOME}/.tern-config
 ln -sf ${BASEDIR}/textlintrc ${HOME}/.textlintrc
 ln -sf ${BASEDIR}/eslintrc ${HOME}/.eslintrc
+ln -sf ${BASEDIR}/stylelintrc ${HOME}/.stylelintrc
 
 if [ ! -e "${VIM_FILES}/autoload/plug.vim" ]; then
 	echo "install plug.vim start"
