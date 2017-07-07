@@ -2,7 +2,7 @@ dotfiles
 ===
 
 # requirement
-+ install nodejs
++ install homebrew
 
 ```bash
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -11,5 +11,8 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 # install
 ```
 ./install.sh
+./brew.sh
+./setup_nodebrew.sh
+./npm.sh
 ```
 
