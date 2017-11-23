@@ -7,7 +7,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0ng/vim-hybrid'
+" Plug 'w0ng/vim-hybrid'
+Plug 'NLKNguyen/papercolor-theme', { 'do': 'cp colors/* ~/.vim/colors/' }
 
 Plug 'Valloric/YouCompleteMe', { 'do': 'brew install cmake; ./install.py --clang-completer --gocode-completer --tern-completer' }
 
@@ -43,9 +44,16 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimshell.vim'
 
 " light line
-Plug 'cocopon/lightline-hybrid.vim'
-Plug 'itchyny/lightline.vim'
+" colorschemes
+" Currently, wombat, solarized, powerline, jellybeans, Tomorrow,
+" Tomorrow_Night, Tomorrow_Night_Blue, Tomorrow_Night_Eighties,
+" PaperColor, seoul256, landscape, one, Dracula, darcula,
+" molokai, materia, material, OldHope, nord and 16color are available.
 " Syntax Check
+Plug 'itchyny/lightline.vim'
+let g:lightline = {
+      \   'colorscheme': 'PaperColor'
+      \ }
 Plug 'scrooloose/syntastic'
 
 Plug 'nathanaelkane/vim-indent-guides'

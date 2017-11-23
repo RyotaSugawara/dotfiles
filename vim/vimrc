@@ -124,8 +124,9 @@ set splitright
 """"""""""""
 " HighLight
 """"""""""""
-set background=dark
-colorscheme hybrid
+set t_Co=256
+set background=light
+colorscheme PaperColor
 syntax enable
 
 function! WhiteSpaceEOL()
