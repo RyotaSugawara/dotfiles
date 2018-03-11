@@ -98,4 +98,6 @@ Plug 'flowtype/vim-flow', {
       \   'do': 'npm install -g flow-bin'
       \ }
 
+Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
+
 call plug#end()

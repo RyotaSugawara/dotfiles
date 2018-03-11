@@ -79,8 +79,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+GHQ_ROOT=$HOME/.ghq
+
+# python
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# flutter
+export PATH=$GHQ_ROOT/github.com/flutter/flutter/bin:$PATH
 
 # golang
 export GOPATH=$HOME/code/golang
@@ -114,3 +122,4 @@ source $HOME/dotfiles/zsh/alias.zsh
 if (which zprof > /dev/null) ;then
   zprof | less
 fi
+
