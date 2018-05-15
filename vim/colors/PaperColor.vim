@@ -105,8 +105,8 @@ fun! s:register_default_theme()
         \       'buftabline_bg':          ['#005f87', '24'],
         \       'buftabline_current_fg':  ['#444444', '238'],
         \       'buftabline_current_bg':  ['#e4e4e4', '254'],
-        \       'buftabline_active_fg': ['#eeeeee', '255'],
-        \       'buftabline_active_bg': ['#005faf', '25'],
+        \       'buftabline_active_fg':   ['#eeeeee', '255'],
+        \       'buftabline_active_bg':   ['#005faf', '25'],
         \       'buftabline_inactive_fg': ['#eeeeee', '255'],
         \       'buftabline_inactive_bg': ['#0087af', '31']
         \     }
@@ -175,11 +175,6 @@ fun! s:register_default_theme()
         \       'folded_bg' : ['#5f005f', '53'],
         \       'wildmenu_fg': ['#1c1c1c', '234'],
         \       'wildmenu_bg': ['#afd700', '148'],
-        \       'tabline_bg':          ['#262626', '235'],
-        \       'tabline_active_fg':   ['#121212', '233'],
-        \       'tabline_active_bg':   ['#00afaf', '37'],
-        \       'tabline_inactive_fg': ['#bcbcbc', '250'],
-        \       'tabline_inactive_bg': ['#585858', '240'],
         \       'spellbad':   ['#5f0000', '52'],
         \       'spellcap':   ['#5f005f', '53'],
         \       'spellrare':  ['#005f00', '22'],
@@ -191,7 +186,19 @@ fun! s:register_default_theme()
         \       'difftext_fg':   ['#5fffff', '87'],
         \       'difftext_bg':   ['#008787', '30'],
         \       'diffchange_fg': ['#d0d0d0', '252'],
-        \       'diffchange_bg': ['#005f5f', '23']
+        \       'diffchange_bg': ['#005f5f', '23'],
+        \       'tabline_bg':          ['#262626', '235'],
+        \       'tabline_active_fg':   ['#121212', '233'],
+        \       'tabline_active_bg':   ['#00afaf', '37'],
+        \       'tabline_inactive_fg': ['#bcbcbc', '250'],
+        \       'tabline_inactive_bg': ['#585858', '240'],
+        \       'buftabline_bg':          ['#262626', '235'],
+        \       'buftabline_current_fg':  ['#121212', '233'],
+        \       'buftabline_current_bg':  ['#00afaf', '37'],
+        \       'buftabline_active_fg':   ['#00afaf', '37'],
+        \       'buftabline_active_bg':   ['#585858', '240'],
+        \       'buftabline_inactive_fg': ['#bcbcbc', '250'],
+        \       'buftabline_inactive_bg': ['#585858', '240']
         \     }
         \   }
 endfun
@@ -1269,11 +1276,35 @@ fun! s:apply_syntax_highlightings()
   exec 'hi makeCommands' . s:fg_foreground
   exec 'hi makeSpecial' . s:fg_orange . s:ft_bold
 
-  " CMake Highlighting
-  exec 'hi cmakeStatement' . s:fg_pink
+  " CMake Highlighting (Builtin)
+  exec 'hi cmakeStatement' . s:fg_blue
   exec 'hi cmakeArguments' . s:fg_foreground
-  exec 'hi cmakeVariableValue' . s:fg_blue
-  exec 'hi cmakeOperators' . s:fg_red
+  exec 'hi cmakeVariableValue' . s:fg_pink
+
+  " CMake Highlighting (Plugin: https://github.com/pboettch/vim-cmake-syntax)
+  exec 'hi cmakeCommand' . s:fg_blue
+  exec 'hi cmakeCommandConditional' . s:fg_purple . s:ft_bold
+  exec 'hi cmakeKWset' . s:fg_orange
+  exec 'hi cmakeKWvariable_watch' . s:fg_orange
+  exec 'hi cmakeKWif' . s:fg_orange
+  exec 'hi cmakeArguments' . s:fg_foreground
+  exec 'hi cmakeKWproject' . s:fg_pink
+  exec 'hi cmakeGeneratorExpressions' . s:fg_orange
+  exec 'hi cmakeGeneratorExpression' . s:fg_aqua
+  exec 'hi cmakeVariable' . s:fg_pink
+  exec 'hi cmakeProperty' . s:fg_aqua
+  exec 'hi cmakeKWforeach' . s:fg_aqua
+  exec 'hi cmakeKWunset' . s:fg_aqua
+  exec 'hi cmakeKWmacro' . s:fg_aqua
+  exec 'hi cmakeKWget_property' . s:fg_aqua
+  exec 'hi cmakeKWset_tests_properties' . s:fg_aqua
+  exec 'hi cmakeKWmessage' . s:fg_aqua
+  exec 'hi cmakeKWinstall_targets' . s:fg_orange
+  exec 'hi cmakeKWsource_group' . s:fg_orange
+  exec 'hi cmakeKWfind_package' . s:fg_aqua
+  exec 'hi cmakeKWstring' . s:fg_olive
+  exec 'hi cmakeKWinstall' . s:fg_aqua
+  exec 'hi cmakeKWtarget_sources' . s:fg_orange
 
   " C Highlighting
   exec 'hi cType' . s:fg_pink . s:ft_bold
@@ -1402,6 +1433,18 @@ fun! s:apply_syntax_highlightings()
   exec 'hi shCase' . s:fg_navy
   exec 'hi shSetList' . s:fg_navy
   " @see Dockerfile Highlighting section for more sh*
+
+  " PowerShell Highlighting
+  exec 'hi ps1Type' . s:fg_green . s:ft_bold
+  exec 'hi ps1Variable' . s:fg_navy
+  exec 'hi ps1Boolean' . s:fg_navy . s:ft_bold
+  exec 'hi ps1FunctionInvocation' . s:fg_pink
+  exec 'hi ps1FunctionDeclaration' . s:fg_pink
+  exec 'hi ps1Keyword' . s:fg_blue . s:ft_bold
+  exec 'hi ps1Exception' . s:fg_red
+  exec 'hi ps1Operator' . s:fg_aqua . s:ft_bold
+  exec 'hi ps1CommentDoc' . s:fg_purple
+  exec 'hi ps1CDocParam' . s:fg_orange
 
   " HTML Highlighting
   exec 'hi htmlTitle' . s:fg_green . s:ft_bold
@@ -1942,6 +1985,56 @@ fun! s:apply_syntax_highlightings()
   exec 'hi awkBoolLogic' . s:fg_foreground
   exec 'hi awkExpression' . s:fg_foreground
   exec 'hi awkSpecialPrintf' . s:fg_olive . s:ft_bold
+
+  " Elm highlighting
+  exec 'hi elmImport' . s:fg_navy 
+  exec 'hi elmAlias' . s:fg_aqua
+  exec 'hi elmType' . s:fg_pink
+  exec 'hi elmOperator' . s:fg_aqua . s:ft_bold
+  exec 'hi elmBraces' . s:fg_aqua . s:ft_bold 
+  exec 'hi elmTypedef' . s:fg_blue .  s:ft_bold
+  exec 'hi elmTopLevelDecl' . s:fg_green . s:ft_bold
+
+  " Purescript highlighting
+  exec 'hi purescriptModuleKeyword' . s:fg_navy
+  exec 'hi purescriptImportKeyword' . s:fg_navy
+  exec 'hi purescriptModuleName' . s:fg_pink
+  exec 'hi purescriptOperator' . s:fg_aqua . s:ft_bold
+  exec 'hi purescriptType' . s:fg_pink
+  exec 'hi purescriptTypeVar' . s:fg_navy
+  exec 'hi purescriptStructure' . s:fg_blue . s:ft_bold
+  exec 'hi purescriptLet' . s:fg_blue . s:ft_bold
+  exec 'hi purescriptFunction' . s:fg_green . s:ft_bold
+  exec 'hi purescriptDelimiter' . s:fg_aqua . s:ft_bold
+  exec 'hi purescriptStatement' . s:fg_purple . s:ft_bold
+  exec 'hi purescriptConstructor' . s:fg_pink
+  exec 'hi purescriptWhere' . s:fg_purple . s:ft_bold
+
+  " F# highlighting
+  exec 'hi fsharpTypeName' . s:fg_pink
+  exec 'hi fsharpCoreClass' . s:fg_pink
+  exec 'hi fsharpType' . s:fg_pink
+  exec 'hi fsharpKeyword' . s:fg_blue . s:ft_bold
+  exec 'hi fsharpOperator' . s:fg_aqua . s:ft_bold
+  exec 'hi fsharpBoolean' . s:fg_green . s:ft_bold
+  exec 'hi fsharpFormat' . s:fg_foreground
+  exec 'hi fsharpLinq' . s:fg_blue
+  exec 'hi fsharpKeyChar' . s:fg_aqua . s:ft_bold
+  exec 'hi fsharpOption' . s:fg_orange
+  exec 'hi fsharpCoreMethod' . s:fg_purple
+  exec 'hi fsharpAttrib' . s:fg_orange
+  exec 'hi fsharpModifier' . s:fg_aqua
+  exec 'hi fsharpOpen' . s:fg_red
+
+  " ASN.1 highlighting
+  exec 'hi asnExternal' . s:fg_green . s:ft_bold
+  exec 'hi asnTagModifier' . s:fg_purple
+  exec 'hi asnBraces' . s:fg_aqua . s:ft_bold
+  exec 'hi asnDefinition' . s:fg_foreground
+  exec 'hi asnStructure' . s:fg_blue
+  exec 'hi asnType' . s:fg_pink
+  exec 'hi asnTypeInfo' . s:fg_aqua . s:ft_bold
+  exec 'hi asnFieldOption' . s:fg_purple
 
   " }}}
 
