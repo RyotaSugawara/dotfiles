@@ -96,6 +96,9 @@ export GOPATH=$HOME/code/golang
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

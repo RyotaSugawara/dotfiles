@@ -8,4 +8,6 @@ brew install \
   the_silver_searcher \
   imagemagick
 
+brew cask install \
+  minikube
 

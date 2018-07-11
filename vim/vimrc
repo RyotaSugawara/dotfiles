@@ -1,3 +1,7 @@
+if has('python3')
+  silent! python3 1
+endif
+
 let s:script_dir = expand('<sfile>:p:h')
 let s:dotfiles_dir = $HOME."/dotfiles"
 let s:vim_dir = s:dotfiles_dir."/vim"
