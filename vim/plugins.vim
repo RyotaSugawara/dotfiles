@@ -81,8 +81,11 @@ Plug 'hail2u/vim-css3-syntax', { 'for': ['css'] }
 " Go
 Plug 'fatih/vim-go', { 'for': ['go'] }
 
+" Terraform
+Plug 'hashivim/vim-terraform', { 'for': ['tf'] }
+
 " Dots
-Plug 'wannesm/wmgraphviz.vim', { 'for': [ 'dot' ] }
+Plug 'wannesm/wmgraphviz.vim', { 'for': ['dot'] }
 
 Plug 'kannokanno/previm', { 'for': ['markdown'] }
 Plug 'thinca/vim-localrc'

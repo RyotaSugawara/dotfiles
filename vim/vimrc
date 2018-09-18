@@ -200,6 +200,7 @@ augroup FileTypeDetect "{{{
   autocmd BufRead,BufNewFile *.tex                    setfiletype tex
   autocmd BufRead,BufNewFile *.vm                     setfiletype velocity
   autocmd BufRead,BufNewFile *.dot,*.diag             setfiletype dot
+  autocmd BufRead,BufNewFile *.tf                     setfiletype tf
   autocmd BufWinEnter,BufNewFile *_spec.rb            setfiletype ruby.rspec
 augroup END
 "}}}
