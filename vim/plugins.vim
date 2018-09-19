@@ -100,4 +100,7 @@ Plug 'flowtype/vim-flow', {
 
 Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
 
+Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+Plug 'racer-rust/vim-racer', { 'for': ['rust'] }
+
 call plug#end()

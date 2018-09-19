@@ -81,6 +81,9 @@ source $ZSH/oh-my-zsh.sh
 
 GHQ_ROOT=$HOME/.ghq
 
+# rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # python
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
