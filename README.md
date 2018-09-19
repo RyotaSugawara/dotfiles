@@ -10,9 +10,5 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 # install
 ```
-./install.sh
-./brew.sh
-./setup_nodebrew.sh
-./npm.sh
+sh ./install.sh
 ```
-
