@@ -81,23 +81,24 @@ source $ZSH/oh-my-zsh.sh
 
 # github repogitory directory
 OWN_GIT_DIR=$HOME/.ghq/github.com
+GHQ_ROOT=$HOME/.ghq
 
 # python
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
-# flutter
-export PATH=$OWN_GIT_DIR/flutter/flutter/bin:$PATH
+# rust
+export PATH=$HOME/.cargo/bin:$PATH
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# flutter
+export PATH=$GHQ_ROOT/github.com/flutter/flutter/bin:$PATH
 
 # golang
 export GOPATH=$HOME/code/golang
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# rust
-export PATH=$HOME/.cargo/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -123,13 +124,17 @@ export TERM=xterm-256color
 # alias
 source $HOME/dotfiles/zsh/alias.zsh
 
-if (which zprof > /dev/null) ;then
+if (which zprof > /dev/null) ; then
   zprof | less
 fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then source $HOME/google-cloud-sdk/path.zsh.inc; fi
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then
+  source $HOME/google-cloud-sdk/path.zsh.inc
+fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then source $HOME/google-cloud-sdk/completion.zsh.inc; fi
+if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then
+  source $HOME/google-cloud-sdk/completion.zsh.inc
+fi

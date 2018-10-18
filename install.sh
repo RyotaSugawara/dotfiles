@@ -29,3 +29,7 @@ fi
 
 echo 'symbolic linking...Done!'
 
+sh ./scripts/install.sh
+sh ./scripts/brew.sh
+sh ./scripts/setup_nodebrew.sh
+sh ./scripts/npm.sh
