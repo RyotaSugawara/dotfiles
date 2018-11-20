@@ -17,10 +17,11 @@ Plug 'mhinz/vim-startify'
 " unite.vim
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
-
 Plug 'Shougo/vimproc.vim', {
       \		'do': 'make -f make_mac.mak'
       \	}
+
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
