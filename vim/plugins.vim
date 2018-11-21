@@ -23,6 +23,9 @@ Plug 'Shougo/vimproc.vim', {
 
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'tpope/vim-dispatch'
+Plug 'mileszs/ack.vim'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
