@@ -129,7 +129,7 @@ set splitright
 " HighLight
 """"""""""""
 set t_Co=256
-set background=dark
+set background=light
 colorscheme PaperColor
 syntax enable
 

@@ -3,6 +3,8 @@
 nnoremap <C-t> :<C-u>tabnew<CR>
 nnoremap <C-h> :<C-u>tabprevious<CR>
 nnoremap <C-l> :<C-u>tabnext<CR>
+nnoremap <silent> gp :bprevious<CR>
+nnoremap <silent> gn :bnext<CR>
 
 inoremap <C-\> <ESC>0i
 inoremap <C-a> <ESC>$a
