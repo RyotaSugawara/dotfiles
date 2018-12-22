@@ -104,6 +104,9 @@ Plug 'flowtype/vim-flow', {
       \   'for': ['javascript'],
       \   'do': 'npm install -g flow-bin'
       \ }
+Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
 
