@@ -44,7 +44,7 @@ set ambiwidth=double
 
 set textwidth=0
 if v:version >= 703
-  set colorcolumn=120
+  set colorcolumn=80
 endif
 set foldmethod=marker
 "}}}
