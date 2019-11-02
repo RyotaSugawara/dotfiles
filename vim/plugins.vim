@@ -108,6 +108,10 @@ Plug 'prettier/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
+" vue
+Plug 'posva/vim-vue', {
+      \ 'for': ['vue'] }
+
 Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
 
 Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
