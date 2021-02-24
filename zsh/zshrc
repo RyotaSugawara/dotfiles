@@ -1,0 +1,28 @@
+export ZSH=$HOME/.oh-my-zsh
+export XDG_CONFIG_HOME=$HOME/.config
+export DOTFILES_ROOT="$HOME/dotfiles"
+
+ZSH_THEME="robbyrussell"
+plugins=(git)
+
+# oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# alias
+source $DOTFILES_ROOT/zsh/alias.zsh
+
+# nvm path
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# rust
+source $HOME/.cargo/env
+
+# By os type
+case "${OSTYPE}" in
+# Ubuntu / Linux
+linux*)
+  [ -f $DOTFILES_ROOT/zsh/linux.zsh ] && source $DOTFILES_ROOT/zsh/linux.zsh
+  ;;
+esac

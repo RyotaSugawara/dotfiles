@@ -1,0 +1,77 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+  nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+'''
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+hook_add = '''
+  colorscheme codedark
+  let g:airline_theme = 'codedark'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr><Tab> pumvisible() ? "\<DOWN>" : "\<Tab>"
+  inoremap <expr><S-Tab> pumvisible() ? "\<UP>" : "\<S-Tab>"
+'''
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -c --exclude-standard']
+'''
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+  let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
+
+  nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+  nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
+  nnoremap <Leader>p :ALEFix<Return>
+
+  let g:ale_fixers = {
+  \   'javascript': ['prettier', 'eslint'],
+  \   'typescript': ['prettier', 'eslint'],
+  \   'json': ['prettier'],
+  \   'css': ['prettier'],
+  \}
+
+  let g:ale_fix_on_save = 1
+  let g:ale_javascript_prettier_use_local_config = 1
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
