@@ -10,6 +10,8 @@
 
 ## Install
 
-```bash
+```zsh
+# pre-install requirements
+$ ./install.sh
 $ ./setup.sh
 ```

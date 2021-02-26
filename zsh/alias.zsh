@@ -1,8 +1,7 @@
 # vim to neovim
-alias vim=nvim
+if type "nvim" > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
 # ghq + peco
 alias cr='cd $(ghq root)/$(ghq list | peco --prompt "GIT REPOGITORY >")'
-
-# vscode command alias for wsl2
-alias code="/mnt/c/Users/ryosu/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"

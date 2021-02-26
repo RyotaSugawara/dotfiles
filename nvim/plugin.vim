@@ -17,7 +17,6 @@ if has('vim_starting')
   endif
 endif
 
-
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 

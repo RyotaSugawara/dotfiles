@@ -19,10 +19,17 @@ export NVM_DIR="$HOME/.nvm"
 # rust
 source $HOME/.cargo/env
 
+# go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
 # By os type
 case "${OSTYPE}" in
 # Ubuntu / Linux
 linux*)
   [ -f $DOTFILES_ROOT/zsh/linux.zsh ] && source $DOTFILES_ROOT/zsh/linux.zsh
+  ;;
+darwin*)
+  [ -f $DOTFILES_ROOT/zsh/macos.zsh ] && source $DOTFILES_ROOT/zsh/macos.zsh
   ;;
 esac
