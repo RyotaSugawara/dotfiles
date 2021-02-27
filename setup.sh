@@ -8,3 +8,4 @@ ln -sf $HOME/dotfiles/nvim $HOME/.config/nvim
 # setup git
 ln -sf $HOME/dotfiles/git/gitignore_global $HOME/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+git config --global core.editor nvim
