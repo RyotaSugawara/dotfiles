@@ -1,10 +1,17 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# [plugins]]
+# repo = 'lambdalisue/fern.vim'
+# hook_add = '''
+#   nnoremap <C-n> :Fern . -reveal=%<CR>
+# '''
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
+repo = 'scrooloose/nerdtree'
 hook_add = '''
-  nnoremap <C-n> :Fern . -reveal=%<CR>
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  nnoremap <C-n> :NERDTreeToggle<CR>
+  nnoremap <C-f> :NERDTreeFind<CR>
 '''
 
 [[plugins]]
