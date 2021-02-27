@@ -21,6 +21,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
   call dein#load_toml(s:rc_dir . '/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:rc_dir . '/dein_nvim.toml', {'lazy': 0})
   call dein#load_toml(s:rc_dir . '/dein_lazy.toml', {'lazy': 1})
 
   call dein#end()
@@ -30,3 +31,8 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+augroup __fern__
+  au!
+  autocmd VimEnter * ++nested Fern . -stay -reveal=%
+augroup END
