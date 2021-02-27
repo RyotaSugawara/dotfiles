@@ -1,6 +1,9 @@
 # vim to neovim
 if type "nvim" > /dev/null 2>&1; then
-  alias vim='nvim'
+  alias vi="nvim"
+  alias vim="nvim"
+  alias view="nvim -R"
+  alias vimdiff="nvim -d"
 fi
 
 # ghq + peco
