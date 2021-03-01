@@ -72,8 +72,10 @@ hook_add = '''
   let g:ale_fixers = {
   \   'javascript': ['prettier', 'eslint'],
   \   'typescript': ['prettier', 'eslint'],
+  \   'typescriptreact': ['prettier', 'eslint'],
   \   'json': ['prettier'],
   \   'css': ['prettier'],
+  \   'html': ['prettier'],
   \}
 
   let g:ale_fix_on_save = 1
