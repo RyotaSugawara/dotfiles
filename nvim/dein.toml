@@ -84,3 +84,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
