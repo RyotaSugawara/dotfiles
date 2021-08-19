@@ -33,3 +33,5 @@ darwin*)
   [ -f $DOTFILES_ROOT/zsh/macos.zsh ] && source $DOTFILES_ROOT/zsh/macos.zsh
   ;;
 esac
+
+eval "$(direnv hook zsh)"
