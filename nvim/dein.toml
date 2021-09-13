@@ -90,3 +90,9 @@ repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_add = '''
+  let g:memolist_path = "~/ghq/github.com/RyotaSugawara/memo/md"
+'''
