@@ -37,13 +37,20 @@ hook_add = '''
   let g:deoplete#enable_at_startup = 1
   inoremap <expr><Tab> pumvisible() ? "\<DOWN>" : "\<Tab>"
   inoremap <expr><S-Tab> pumvisible() ? "\<UP>" : "\<S-Tab>"
+  autocmd CompleteDone * silent! pclose!
+  autocmd InsertLeave * silent! pclose!
 '''
 
 [[plugins]]
+repo = 'Shougo/echodoc.vim'
+
+[[plugins]]
 repo = 'roxma/nvim-yarp'
+on_source = 'deoplete.nvim'
 
 [[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
+on_source = 'deoplete.nvim'
 
 [[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
