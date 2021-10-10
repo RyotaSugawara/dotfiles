@@ -69,14 +69,23 @@ hook_add = '''
   nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
   nnoremap <Leader>p :ALEFix<Return>
 
+  let g:ale_linters = {
+    \   'javascript': ['prettier', 'eslint'],
+    \   'typescript': ['prettier', 'eslint'],
+    \   'typescriptreact': ['prettier', 'eslint'],
+    \   'json': ['prettier'],
+    \   'css': ['prettier'],
+    \   'html': ['prettier'],
+    \ }
+
   let g:ale_fixers = {
-  \   'javascript': ['prettier', 'eslint'],
-  \   'typescript': ['prettier', 'eslint'],
-  \   'typescriptreact': ['prettier', 'eslint'],
-  \   'json': ['prettier'],
-  \   'css': ['prettier'],
-  \   'html': ['prettier'],
-  \}
+    \   'javascript': ['prettier', 'eslint'],
+    \   'typescript': ['prettier', 'eslint'],
+    \   'typescriptreact': ['prettier', 'eslint'],
+    \   'json': ['prettier'],
+    \   'css': ['prettier'],
+    \   'html': ['prettier'],
+    \ }
 
   let g:ale_fix_on_save = 1
   let g:ale_javascript_prettier_use_local_config = 1
