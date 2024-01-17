@@ -4,7 +4,8 @@ let s:vim_dir = s:dotfiles_dir."/nvim"
 " Default setting
 set number
 set showmatch matchtime=1
-set list listchars=tab:>\ ,extends:<
+set listchars=eol:$,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
 set tabstop=2
 set shiftwidth=2
 set expandtab

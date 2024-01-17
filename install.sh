@@ -8,16 +8,21 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 brew install \
   neovim \
   python \
-  go
+  go \
+  direnv \
+  tmux \
+  deno
+
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # cargo install
 cargo install \
   ripgrep
 
 # go install
-go get \
-  github.com/x-motemen/ghq \
-  github.com/peco/peco/cmd/peco
+go install github.com/x-motemen/ghq@latest
+go install github.com/peco/peco/cmd/peco@latest
 
 # pip install
 pip3 install --user pynvim
