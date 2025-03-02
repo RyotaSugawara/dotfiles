@@ -1,0 +1,8 @@
+[terminal] 
+shell = { program = "/bin/zsh", args = ["-l"] }
+
+[font]
+normal = { family = "HackGen35 Console NF", style = "Regular" }
+
+[window]
+startup_mode = "Maximized"

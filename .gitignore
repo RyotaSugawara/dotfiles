@@ -1,0 +1,5 @@
+zsh/alias_secret.zsh
+config
+!config/alacritty
+!config/mise
+!config/nvim
