@@ -1,11 +1,22 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export DOTFILES_ROOT=$HOME/dotfiles
 
+# By os type
+case "${OSTYPE}" in
+# Ubuntu / Linux
+linux*)
+  export BREW_DIR=/home/linuxbrew/.linuxbrew/bin/
+  ;;
+darwin*)
+  export BREW_DIR=/opt/homebrew/bin/
+  ;;
+esac
+
 # tools env
 ## mise
 eval "$(~/.local/bin/mise activate zsh)"
 ## homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(${BREW_DIR}/brew shellenv)"
 ## direnv
 eval "$(direnv hook zsh)"
 
