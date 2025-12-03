@@ -13,8 +13,9 @@ brew install \
   direnv
 
 # cargo install
-cargo install \
+cargo install --locked \
   ripgrep \
+  bat \
   fd-find
 
 # go install

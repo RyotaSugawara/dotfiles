@@ -6,3 +6,9 @@ normal = { family = "HackGen35 Console NF", style = "Regular" }
 
 [window]
 startup_mode = "Maximized"
+opacity = 0.9
+
+[[keyboard.bindings]]
+key     = 13
+mods    = "Control"
+chars   = "\u001e"

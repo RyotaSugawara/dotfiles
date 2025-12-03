@@ -3,3 +3,6 @@
 -- Add any additional options here
 
 vim.g.lazyvim_check_order = false
+
+-- Enable this option to avoid conflicts with Prettier.
+vim.g.lazyvim_prettier_needs_config = true
