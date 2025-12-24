@@ -6,10 +6,6 @@ if type "nvim" > /dev/null 2>&1; then
   alias vimdiff="nvim -d"
 fi
 
-# ghq + peco
-alias cr='cd $(ghq root)/$(ghq list | peco --prompt "GIT REPOGITORY >")'
-alias gr='cd $(ls -d $GOPATH/src/*/ | peco --prompt "go src >")'
-
 # git
 alias gst='git status'
 alias ga='git add'
@@ -32,3 +28,23 @@ alias glods="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 alias glog='git log --oneline --decorate --graph'
 alias gloga='git log --oneline --decorate --graph --all'
+
+# git branch select interactive
+gsw() {
+  local branch=$(git branch -a | peco | tr -d ' ' | tr -d '*')
+  if [ -n "$branch" ]; then
+    if [[ "$branch" =~ "remotes/" ]]; then
+      branch=$(echo "$branch" | sed "s#remotes/[^/]*/##")
+    fi
+    git switch "$branch"
+  fi
+}
+
+# ghq select
+cr() {
+  local repo=$(ghq list | peco --query "$LBUFFER")
+  if [ -n "$repo" ]; then
+    repo=$(ghq list --full-path --exact $repo)
+    cd "$repo"
+  fi
+}

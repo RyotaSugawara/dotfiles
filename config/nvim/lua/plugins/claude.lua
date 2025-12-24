@@ -30,9 +30,8 @@ return {
         ---@module "snacks"
         ---@type snacks.win.Config|{}
         snacks_win_opts = {
-          position = "float",
-          width = 0.9,
-          height = 0.9,
+          width = 0.25,
+          height = 1.0,
           keys = {
             claude_hide = {
               toggle_key,
